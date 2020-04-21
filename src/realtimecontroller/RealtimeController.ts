@@ -58,6 +58,11 @@ export default interface RealtimeController {
     callback: (attendeeId: string, present: boolean, externalUserId?: string | null) => void
   ): void;
 
+  /**
+   * Retrieve the externalUserId from the attendeeId-externalUserId map
+   */
+  realtimeExternalUserIdFromAttendeeId(attendeeId: string): string | null;
+
   // Audio Input
 
   /**
